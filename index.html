@@ -48,6 +48,16 @@
             align-items: center;
             width: 100%;
         }
+        .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }        
     </style>
     <title>Document</title>
 </head>
@@ -64,13 +74,19 @@
     <div class="container">
         <div class="todo">
             <div class="top">
-                <span id="text" ondblclick="openModal(this)" class="title">title</span>
+                <span ondblclick="openModal(this)" class="title">title</span>
                 <button>x</button>
             </div>
             <span>11:22</span>
         </div>
     </div>
-  
+
+    <div id="myModal" class="modal">
+        <input class="ee" type="text" id="inputText">
+        <button class="ww" onclick="changeText()">Изменить текст</button>
+      </div>
+
+    
 
     <script src="./index.js"></script>
 </body>

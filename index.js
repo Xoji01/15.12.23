@@ -69,18 +69,51 @@ function reload(arr, place) {
                 todo.remove()
             }
         }
-            todo.ondblclick = () => {
-                let newTitle = prompt('write new title')
-            if (newTitle.length > 0) {
-                    item.title = newTitle
-                    title.innerHTML = newTitle
+            // todo.ondblclick = () => {
+            //     let newTitle = prompt('write new title')
+            // if (newTitle.length > 0) {
+            //         item.title = newTitle
+            //         title.innerHTML = newTitle
             
-                }
-            }
+            //     }
+            // }
         todo.onclick = () => {
             title.style.textDecoration = "line-through";
               todo.isDone = true;
               console.log(todo.isDone);
+            }
+            // const myText = document.getElementById('.title');
+            const modal = document.getElementById('myModal');
+            const inputText = document.getElementById('inputText');
+            const qw = document.getElementById('.ww')
+            
+            todo.ondblclick = () => {
+                modal.style.display = 'block'
+                qw.onclick = () => {
+                  
+            function changeText() {
+              const newText = inputText.value;
+              todo.textContent = newText;
+              modal.style.display = 'none';
+            }
+                }
+                // if(inputText.length > 0) {
+                //     item.title = inputText
+                //     title.innerHTML = inputText
+                }
+            }
+            // myText.addEventListener('dblclick', function() {
+            //   modal.style.display = 'block';
+            // });
+            
+            // function changeText() {
+            //   const newText = inputText.value;
+            //   todo.textContent = newText;
+            //   modal.style.display = 'none';
+            // }
         }
-    }
-}
+
+
+
+
+
